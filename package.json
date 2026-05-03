@@ -1,14 +1,18 @@
 {
     "author": "Tim Stough",
-    "dependencies": {},
+    "dependencies": {
+        "@rebble/clay": "^1.0.8"
+    },
     "keywords": [
         "pebble-app"
     ],
     "name": "msl-time",
     "pebble": {
+        "capabilities": ["configurable"],
+        "companyName": "Tim Stough",
         "displayName": "Curiosity Mars Time",
         "enableMultiJS": true,
-        "messageKeys": [],
+        "messageKeys": ["SecondsDuration", "TZLabel"],
         "projectType": "native",
         "resources": {
             "media": []
@@ -24,6 +28,7 @@
             "flint"
         ],
         "uuid": "8ca431ee-4a8f-437a-96ca-f6a97dd1bf46",
+        "versionLabel": "0.1",
         "watchapp": {
             "watchface": true
         }

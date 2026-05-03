@@ -53,3 +53,12 @@ dkms.conf
 
 # debug information files
 *.dwo
+
+# Pebble stuff
+build/
+node_modules/
+.lock-waf_linux_build
+.claude/
+CLAUDE.md
+pebble-claude.md
+handoff.md
