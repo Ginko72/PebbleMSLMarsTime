@@ -5,10 +5,9 @@
 #define MARS_EPOCH_UNIX   1344174599LL
 #define MARS_LEAP_SECONDS 2LL
 
-// Mars sol = 88775.244 Earth seconds; ratio approximation: * 1000000 / 1027491
-// Error < 1 second/sol, acceptable for display
-#define MARS_RATIO_NUM    1000000LL
-#define MARS_RATIO_DEN    1027491LL
+// Mars sol = 88775.244 Earth seconds; ratio 1/1.02749125 exact as 4000000/4109965
+#define MARS_RATIO_NUM    4000000LL
+#define MARS_RATIO_DEN    4109965LL
 
 // SCLK calibration: at Unix 1381317960, SCLK = 434589485
 // Rover clock runs fast by factor 1.000009438 → correct by * 1000000000 / 1000009438
