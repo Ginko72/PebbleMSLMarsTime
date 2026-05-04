@@ -12,7 +12,7 @@ void settings_load(Settings *s) {
     if (persist_exists(KEY_TZ_LABEL)) {
         persist_read_string(KEY_TZ_LABEL, s->tz_label, TZ_LABEL_MAX);
     } else {
-        strncpy(s->tz_label, "LT", TZ_LABEL_MAX);
+        strncpy(s->tz_label, "lt", TZ_LABEL_MAX);
     }
 }
 

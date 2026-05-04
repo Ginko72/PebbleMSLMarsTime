@@ -15,7 +15,74 @@
         "messageKeys": ["SecondsDuration", "TZLabel"],
         "projectType": "native",
         "resources": {
-            "media": []
+            "media": [
+                {
+                    "type": "font",
+                    "name": "FONT_MULISH_REGULAR_18",
+                    "file": "fonts/Mulish-Regular.ttf",
+                    "targetPlatforms": ["emery", "gabbro"]
+                },
+                {
+                    "type": "font",
+                    "name": "FONT_MULISH_REGULAR_12",
+                    "file": "fonts/Mulish-Regular.ttf",
+                    "targetPlatforms": ["chalk"]
+                },
+                {
+                    "type": "font",
+                    "name": "FONT_MULISH_REGULAR_14",
+                    "file": "fonts/Mulish-Regular.ttf",
+                    "targetPlatforms": ["aplite", "basalt", "diorite", "flint"]
+                },
+                {
+                    "type": "font",
+                    "name": "FONT_MULISH_BOLD_42",
+                    "file": "fonts/Mulish-Bold.ttf",
+                    "targetPlatforms": ["emery", "gabbro"]
+                },
+                {
+                    "type": "font",
+                    "name": "FONT_MULISH_BOLD_36",
+                    "file": "fonts/Mulish-Bold.ttf",
+                    "targetPlatforms": ["chalk"]
+                },
+                {
+                    "type": "font",
+                    "name": "FONT_MULISH_BOLD_30",
+                    "file": "fonts/Mulish-Bold.ttf",
+                    "targetPlatforms": ["aplite", "basalt", "diorite", "flint"]
+                },
+                {
+                    "type": "font",
+                    "name": "FONT_MULISH_BOLD_24",
+                    "file": "fonts/Mulish-Bold.ttf",
+                    "targetPlatforms": ["emery", "gabbro"]
+                },
+                {
+                    "type": "font",
+                    "name": "FONT_MULISH_BOLD_22",
+                    "file": "fonts/Mulish-Bold.ttf",
+                    "targetPlatforms": ["chalk"]
+                },
+                {
+                    "type": "font",
+                    "name": "FONT_MULISH_BOLD_18",
+                    "file": "fonts/Mulish-Bold.ttf",
+                    "targetPlatforms": ["emery", "gabbro", "aplite", "basalt", "diorite", "flint"]
+                },
+                {
+                    "type": "font",
+                    "name": "FONT_MULISH_BOLD_16",
+                    "file": "fonts/Mulish-Bold.ttf",
+                    "targetPlatforms": ["chalk"]
+                },
+                {
+                    "type": "font",
+                    "name": "FONT_MULISH_BOLD_14",
+                    "file": "fonts/Mulish-Bold.ttf",
+                    "targetPlatforms": ["aplite", "basalt", "diorite", "flint"]
+                }
+            ]
         },
         "sdkVersion": "3",
         "targetPlatforms": [
