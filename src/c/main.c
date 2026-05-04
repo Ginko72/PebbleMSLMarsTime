@@ -6,14 +6,14 @@
 
 // message_keys.auto.h is empty — declare manually
 extern uint32_t MESSAGE_KEY_SecondsDuration;
-extern uint32_t MESSAGE_KEY_TZLabel;
+extern uint32_t MESSAGE_KEY_DateEU;
 
 // String buffer sizes
 #define BUF_SOL_LABEL  16   // "MSL sol 12345\0"
 #define BUF_MARS_TIME  10   // "HH:MM:SS\0"
-#define BUF_SCET       14   // uint32 prefix (10 digits) + "--\0" = 13 max
-#define BUF_UTC        18   // "UTC " + uint16 yday (5) + "T" + uint8 HH:MM + \0 = 17 max
-#define BUF_LT         16   // label (7) + " " + uint8 HH:MM + \0 = 15 max
+#define BUF_SCET       14   // uint32 prefix (10 digits) + "00\0" = 13 max
+#define BUF_UTC        18   // "utc " + yday (5) + "T" + HH:MM + \0 = 17 max
+#define BUF_LT          9   // "12:34pm\0"
 #define BUF_DATE       12   // "Sun 05/03\0"
 
 static Window      *s_window;
@@ -74,18 +74,19 @@ static void prv_update_display(void) {
              (int)(uint8_t)utc->tm_min);
     text_layer_set_text(s_layer_utc, s_buf_utc);
 
-    // Local time — 12-hour with am/pm
+    // Local time — 12-hour with am/pm, no timezone label
     struct tm *lt_now = localtime(&now);
     int lt_h = (int)(uint8_t)lt_now->tm_hour;
-    snprintf(s_buf_lt, BUF_LT, "%.7s %d:%02d%s",
-             s_settings.tz_label,
+    snprintf(s_buf_lt, BUF_LT, "%d:%02d%s",
              lt_h % 12 ? lt_h % 12 : 12,
              (int)(uint8_t)lt_now->tm_min,
              lt_h < 12 ? "am" : "pm");
     text_layer_set_text(s_layer_lt, s_buf_lt);
 
-    // Date
-    strftime(s_buf_date, BUF_DATE, "%a %m/%d", lt_now);
+    // Date — MM/DD (US) or DD/MM (EU)
+    strftime(s_buf_date, BUF_DATE,
+             s_settings.date_eu ? "%a %d/%m" : "%a %m/%d",
+             lt_now);
     text_layer_set_text(s_layer_date, s_buf_date);
 }
 
@@ -133,10 +134,9 @@ static void prv_inbox_received(DictionaryIterator *iter, void *context) {
         s_settings.seconds_duration = (uint8_t)t->value->int32;
     }
 
-    t = dict_find(iter, MESSAGE_KEY_TZLabel);
+    t = dict_find(iter, MESSAGE_KEY_DateEU);
     if (t) {
-        strncpy(s_settings.tz_label, t->value->cstring, TZ_LABEL_MAX - 1);
-        s_settings.tz_label[TZ_LABEL_MAX - 1] = '\0';
+        s_settings.date_eu = (uint8_t)(t->value->int32 != 0);
     }
 
     settings_save(&s_settings);

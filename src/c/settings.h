@@ -1,11 +1,9 @@
 #pragma once
 #include <stdint.h>
 
-#define TZ_LABEL_MAX 8
-
 typedef struct {
     uint8_t seconds_duration;
-    char    tz_label[TZ_LABEL_MAX];
+    uint8_t date_eu;            // 0 = MM/DD (US), 1 = DD/MM (EU)
 } Settings;
 
 void settings_load(Settings *s);

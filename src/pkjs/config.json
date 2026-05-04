@@ -10,13 +10,10 @@
     "step": 1
   },
   {
-    "type": "input",
-    "messageKey": "TZLabel",
-    "label": "Local timezone label (e.g. PDT, EST)",
-    "defaultValue": "LT",
-    "attributes": {
-      "maxlength": 7
-    }
+    "type": "toggle",
+    "messageKey": "DateEU",
+    "label": "Date format DD/MM (European)",
+    "defaultValue": false
   },
   { "type": "submit", "defaultValue": "Save Settings" }
 ]

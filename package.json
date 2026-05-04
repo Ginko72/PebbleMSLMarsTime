@@ -12,7 +12,7 @@
         "companyName": "Tim Stough",
         "displayName": "Curiosity Mars Time",
         "enableMultiJS": true,
-        "messageKeys": ["SecondsDuration", "TZLabel"],
+        "messageKeys": ["SecondsDuration", "DateEU"],
         "projectType": "native",
         "resources": {
             "media": [
