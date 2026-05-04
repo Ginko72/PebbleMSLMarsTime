@@ -74,13 +74,17 @@ static void prv_update_display(void) {
              (int)(uint8_t)utc->tm_min);
     text_layer_set_text(s_layer_utc, s_buf_utc);
 
-    // Local time — 12-hour with am/pm, no timezone label
+    // Local time — respects watch 24h/12h setting
     struct tm *lt_now = localtime(&now);
     int lt_h = (int)(uint8_t)lt_now->tm_hour;
-    snprintf(s_buf_lt, BUF_LT, "%d:%02d%s",
-             lt_h % 12 ? lt_h % 12 : 12,
-             (int)(uint8_t)lt_now->tm_min,
-             lt_h < 12 ? "am" : "pm");
+    if (clock_is_24h_style()) {
+        snprintf(s_buf_lt, BUF_LT, "%02d:%02d", lt_h, (int)(uint8_t)lt_now->tm_min);
+    } else {
+        snprintf(s_buf_lt, BUF_LT, "%d:%02d%s",
+                 lt_h % 12 ? lt_h % 12 : 12,
+                 (int)(uint8_t)lt_now->tm_min,
+                 lt_h < 12 ? "am" : "pm");
+    }
     text_layer_set_text(s_layer_lt, s_buf_lt);
 
     // Date — MM/DD (US) or DD/MM (EU)

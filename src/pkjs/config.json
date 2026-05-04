@@ -13,6 +13,7 @@
     "type": "toggle",
     "messageKey": "DateEU",
     "label": "Date format DD/MM (European)",
+    "description": "If checked, the date will be displayed in the format DD/MM. If unchecked, it will be displayed in the format MM/DD.",
     "defaultValue": false
   },
   { "type": "submit", "defaultValue": "Save Settings" }
