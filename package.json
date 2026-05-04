@@ -20,67 +20,78 @@
                     "type": "font",
                     "name": "FONT_MULISH_REGULAR_18",
                     "file": "fonts/Mulish-Regular.ttf",
-                    "targetPlatforms": ["emery", "gabbro"]
+                    "targetPlatforms": ["emery", "gabbro"],
+                    "characterRegex": "[MSLa-z0-9/ ]"
                 },
                 {
                     "type": "font",
                     "name": "FONT_MULISH_REGULAR_12",
                     "file": "fonts/Mulish-Regular.ttf",
-                    "targetPlatforms": ["chalk"]
+                    "targetPlatforms": ["chalk"],
+                    "characterRegex": "[MSLa-z0-9/ ]"
                 },
                 {
                     "type": "font",
                     "name": "FONT_MULISH_REGULAR_14",
                     "file": "fonts/Mulish-Regular.ttf",
-                    "targetPlatforms": ["aplite", "basalt", "diorite", "flint"]
+                    "targetPlatforms": ["aplite", "basalt", "diorite", "flint"],
+                    "characterRegex": "[MSLa-z0-9/ ]"
                 },
                 {
                     "type": "font",
                     "name": "FONT_MULISH_BOLD_42",
                     "file": "fonts/Mulish-Bold.ttf",
-                    "targetPlatforms": ["emery", "gabbro"]
+                    "targetPlatforms": ["emery", "gabbro"],
+                    "characterRegex": "[0-9:]"
                 },
                 {
                     "type": "font",
                     "name": "FONT_MULISH_BOLD_36",
                     "file": "fonts/Mulish-Bold.ttf",
-                    "targetPlatforms": ["chalk"]
+                    "targetPlatforms": ["chalk"],
+                    "characterRegex": "[0-9:]"
                 },
                 {
                     "type": "font",
                     "name": "FONT_MULISH_BOLD_30",
                     "file": "fonts/Mulish-Bold.ttf",
-                    "targetPlatforms": ["aplite", "basalt", "diorite", "flint"]
+                    "targetPlatforms": ["aplite", "basalt", "diorite", "flint"],
+                    "characterRegex": "[0-9:]"
                 },
                 {
                     "type": "font",
                     "name": "FONT_MULISH_BOLD_24",
                     "file": "fonts/Mulish-Bold.ttf",
-                    "targetPlatforms": ["emery", "gabbro"]
+                    "targetPlatforms": ["emery", "gabbro"],
+                    "characterRegex": "[0-9T:ampcut ]"
                 },
                 {
                     "type": "font",
                     "name": "FONT_MULISH_BOLD_22",
                     "file": "fonts/Mulish-Bold.ttf",
-                    "targetPlatforms": ["chalk"]
+                    "targetPlatforms": ["chalk"],
+                    "characterRegex": "[0-9T:ampcut ]"
                 },
                 {
                     "type": "font",
                     "name": "FONT_MULISH_BOLD_18",
                     "file": "fonts/Mulish-Bold.ttf",
-                    "targetPlatforms": ["emery", "gabbro", "aplite", "basalt", "diorite", "flint"]
+                    "targetPlatforms": ["emery", "gabbro", "aplite", "basalt", "diorite", "flint"],
+                    "characterRegex": "[0-9T:ampcut ]"
                 },
                 {
                     "type": "font",
                     "name": "FONT_MULISH_BOLD_16",
                     "file": "fonts/Mulish-Bold.ttf",
-                    "targetPlatforms": ["chalk"]
+                    "targetPlatforms": ["chalk"],
+                    "characterRegex": "[0-9T:ampcut ]"
                 },
                 {
                     "type": "font",
                     "name": "FONT_MULISH_BOLD_14",
                     "file": "fonts/Mulish-Bold.ttf",
-                    "targetPlatforms": ["aplite", "basalt", "diorite", "flint"]
+                    "targetPlatforms": ["aplite", "basalt", "diorite", "flint"],
+                    "characterRegex": "[0-9T:ampcut ]"
                 }
             ]
         },

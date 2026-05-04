@@ -3,6 +3,7 @@
 #include "settings.h"
 #include "layout.h"
 #include <string.h>
+#include <ctype.h>
 
 // message_keys.auto.h is empty — declare manually
 extern uint32_t MESSAGE_KEY_SecondsDuration;
@@ -91,6 +92,12 @@ static void prv_update_display(void) {
     strftime(s_buf_date, BUF_DATE,
              s_settings.date_eu ? "%a %d/%m" : "%a %m/%d",
              lt_now);
+
+    // Lowercase the date string to show the day of the week in lowercase
+    for (char *p = s_buf_date; *p; p++) {
+        *p = (char)tolower((unsigned char)*p);
+    }
+
     text_layer_set_text(s_layer_date, s_buf_date);
 }
 
